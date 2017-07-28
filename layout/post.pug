@@ -2,24 +2,25 @@ extends _partial/layout
 
 block content
   header
-    span#toggle
-      i.fa.fa-paper-plane-o
-      | 本站介绍
-      .nav#navToggle
-        .line
-        .line
-        .line
-        ul#links.hide
-          li
-            a(href="/") 首页
-          li
-            a(href="/introduction" style="color:#14a5bc") 本站介绍
-          li
-            a(href="https://fc.fanqier.com/f/flxdav") 提交网址
   .container
+    .header
+      span#toggle
+        i.fa.fa-paper-plane-o
+        | 本站介绍
+        .nav#navToggle
+          .line
+          .line
+          .line
+          ul#links.hide
+            li
+              a(href="/") 首页
+            li
+              a(href="/introduction" style="color:#14a5bc") 本站介绍
+            li
+              a(href="https://fc.fanqier.com/f/flxdav") 提交网址
     article
       div.time
-        span!= '更新于 ' + date(page.date, 'YYYY.MM.DD')
+        span!= '更新于 ' + date(page.updated, 'YYYY.MM.DD')
       .content!=page.content
 
   script.
