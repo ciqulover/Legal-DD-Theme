@@ -51,7 +51,7 @@ table, tbody {
 tr {
   display: inline-block;
   float: left;
-  padding-left: 34px;
+  padding-left: 54px;
   width: 50%;
   margin-bottom: 30px;
 }
@@ -139,14 +139,18 @@ article {
   }
 
   h1, h2 {
-    box-sizing: border-box;
+    margin-left: 16px;
     padding-left: 12px;
     border-left: 4px solid #3aabbf;
   }
 
   h3 {
+    margin-left: 32px;
+    box-sizing: border-box;
     padding-left: 16px;
+    border-left: 4px solid #3aabbf;
   }
+
 
   h1, h2, h3 {
     color: #34495e;
