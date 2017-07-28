@@ -51,9 +51,16 @@ table, tbody {
 tr {
   display: inline-block;
   float: left;
-  padding-left: 54px;
   width: 50%;
   margin-bottom: 30px;
+}
+
+h2 + table tr {
+  padding-left: 34px;
+}
+
+h3 + table tr {
+  padding-left: 54px;
 }
 
 td {
@@ -150,7 +157,6 @@ article {
     padding-left: 16px;
     border-left: 4px solid #3aabbf;
   }
-
 
   h1, h2, h3 {
     color: #34495e;
