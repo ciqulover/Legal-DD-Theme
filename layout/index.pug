@@ -25,7 +25,7 @@ block content
     .toc_container.hide#tocContainer!=toc(post.content, {list_number: false})
     article
       div.time
-        span!= '更新于 ' + date(post.customDate, 'YYYY.MM.DD')
+        span!= '更新于 ' + date(post.updated, 'YYYY.MM.DD')
       .content!=post.content
   script.
     if (window.innerWidth < 500) {
