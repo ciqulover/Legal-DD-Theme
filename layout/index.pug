@@ -1,0 +1,52 @@
+extends _partial/layout
+
+block content
+  - var post=page.posts.filter(function(post) {
+  - return post.layout=='navigation'
+  - })['data'][0]
+  header
+  .container
+    .header
+      span#toggle
+        i.fa.fa-paper-plane-o
+        | 法律尽职调查导航
+        i#icon.fa.fa-angle-down
+        .nav#navToggle
+          .line
+          .line
+          .line
+          ul#links.hide
+            li
+              a(href="/" style="color:#14a5bc") 首页
+            li
+              a(href="/introduction") 本站介绍
+            li
+              a(href="https://fc.fanqier.com/f/flxdav") 提交网址
+    .toc_container.hide#tocContainer!=toc(post.content, {list_number: false})
+    article
+      div.time
+        span!= '更新于 ' + date(post.customDate, 'YYYY.MM.DD')
+      .content!=post.content
+  script.
+    if (window.innerWidth < 500) {
+      var toggle = document.getElementById('toggle')
+      var icon = document.getElementById('icon')
+      var tocContainer = document.getElementById('tocContainer')
+      var navToggle = document.getElementById('navToggle')
+      var links = document.getElementById('links')
+      toggle.addEventListener('click', function () {
+        icon.className = icon.className == 'fa fa-angle-up' ? 'fa fa-angle-down' : 'fa fa-angle-up'
+        tocContainer.className = icon.className == 'fa fa-angle-up' ? 'toc_container' : 'toc_container hide'
+        links.className = 'hide'
+      })
+      navToggle.addEventListener('click', function (event) {
+        event.stopPropagation()
+        links.className = links.className == 'hide' ? '' : 'hide'
+        icon.className = 'fa fa-angle-down'
+        tocContainer.className = 'toc_container hide'
+      })
+      document.addEventListener('scroll', function () {
+        icon.className = 'fa fa-angle-down'
+        tocContainer.className = 'toc_container hide'
+      })
+    }

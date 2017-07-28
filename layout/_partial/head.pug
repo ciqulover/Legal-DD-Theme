@@ -1,0 +1,17 @@
+meta(charset="utf-8")
+meta(name="X-UA-Compatible" content="IE=edge, chrome=1")
+meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+meta(name="keywords" content=theme.keywords)
+meta(name="description" content=theme.description)
+link(rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css")
+
+link(rel="stylesheet" href=url_for("/css/index.css"))
+link(rel="icon" href=url_for(theme.favicon))
+link(rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css")
+
+
+- var title = page.title
+if is_home()
+  - title='法律尽职调查导航'
+
+title!= title ? title : config.title

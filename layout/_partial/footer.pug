@@ -1,0 +1,18 @@
+footer
+  div#first
+    p
+      span 2017-2017 &nbsp;
+      i(class="fa fa-gavel" aria-hidden="true")
+      span &nbsp; Project Legal DD
+    p#second
+      span Powered by &nbsp;
+        a(href="https://ycwalker.com") ciqu
+      span &nbsp;&nbsp;| &nbsp;&nbsp;Designed by CiCi &nbsp;
+
+    script.
+      if (window.innerWidth < 500) {
+        document.getElementById('first').innerHTML += `<p><span>Launched by &nbsp;<a href="https://tablezhao.com">TonyZ</a></span><span>&nbsp;&nbsp;&amp; Tina</span></p>`
+      } else {
+        document.getElementById('second').innerHTML += `<span>Launched by &nbsp;<a href="https://tablezhao.com">TonyZ</a></span><span>&nbsp;&nbsp;&amp; Tina</span>`
+      }
+
