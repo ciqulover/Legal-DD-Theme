@@ -9,7 +9,7 @@ block content
     .header
       span#toggle
         i.fa.fa-paper-plane-o
-        a(href="/" style="color:#666") 法律尽职调查导航
+        a#home(href="/" style="color:#666") 法律尽职调查导航
         i#icon.fa.fa-angle-down
         .nav#navToggle
           .line
@@ -29,6 +29,7 @@ block content
       .content!=post.content
   script.
     if (window.innerWidth < 500) {
+      document.getElementById('home').href='javascript:;'
       var toggle = document.getElementById('toggle')
       var icon = document.getElementById('icon')
       var tocContainer = document.getElementById('tocContainer')
